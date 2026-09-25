@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QVAC Pocket Translator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="app">
+
+    <header class="header">
+      <div>
+        <div class="brand">QVAC</div>
+        <h1>Pocket Translator</h1>
+        <p>Private translation powered by local AI.</p>
+      </div>
+
+      <div class="status">
+        <span class="status-dot"></span>
+        LOCAL AI
+      </div>
+    </header>
+
+    <section class="translator-card">
+
+      <div class="language-bar">
+
+        <button id="sourceLanguage" class="language active">
+          English
+        </button>
+
+        <button id="swapButton" class="swap" title="Swap languages">
+          ⇄
+        </button>
+
+        <button id="targetLanguage" class="language">
+          Spanish
+        </button>
+
+      </div>
+
+      <div class="translation-area">
+
+        <div class="input-panel">
+          <textarea
+            id="inputText"
+            maxlength="2000"
+            placeholder="Type something to translate..."
+          ></textarea>
+
+          <div class="panel-footer">
+            <span id="charCount">0 / 2000</span>
+
+            <button id="clearButton" class="small-button">
+              Clear
+            </button>
+          </div>
+        </div>
+
+        <div class="output-panel">
+
+          <div id="outputText" class="output">
+            Your translation will appear here.
+          </div>
+
+          <div class="panel-footer">
+            <span id="directionLabel">English → Spanish</span>
+
+            <button id="copyButton" class="small-button">
+              Copy
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <button id="translateButton" class="translate-button">
+        Translate
+      </button>
+
+      <div id="loading" class="loading hidden">
+        <span class="loader"></span>
+        QVAC is translating locally...
+      </div>
+
+      <div id="error" class="error hidden"></div>
+
+    </section>
+
+    <section class="history-section">
+
+      <div class="section-title">
+        <h2>Recent translations</h2>
+
+        <button id="clearHistory" class="text-button">
+          Clear history
+        </button>
+      </div>
+
+      <div id="history" class="history">
+        <div class="empty-history">
+          Your recent translations will appear here.
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      <span>QVAC SDK 0.20.0</span>
+      <span>•</span>
+      <span>On-device inference</span>
+    </footer>
+
+  </main>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
