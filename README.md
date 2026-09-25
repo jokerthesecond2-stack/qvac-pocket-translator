@@ -40,5 +40,5 @@ The translation models are loaded locally through QVAC. The first model use may 
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/qvac-pocket-translator.git
+https://github.com/jokerthesecond2-stack/qvac-pocket-translator.git
 cd qvac-pocket-translator
